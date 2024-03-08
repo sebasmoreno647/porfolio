@@ -1,0 +1,407 @@
+<style>
+    @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
+    @import url('https://fonts.googleapis.com/css2?family=Comforter+Brush&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Noto+Serif+JP&display=swap');
+
+    #letra {
+        font-family: "Comforter Brush", cursive;
+        font-weight: 400;
+        font-size: 2rem;
+        transition: all 0.5s;
+    }
+
+    #superior {
+        display: flex;
+        justify-content: space-between;
+        
+    }
+
+    #logo {
+        /* background-color: #33aa33; */
+
+    }
+
+    #menu {
+        display: flex;
+        /* background-color: #aa33aa; */
+    }
+
+    #contenedor{
+        display: flex;
+        justify-content: center;
+        position: relative;
+        height: 450px;
+    }
+    #contenedor>div {
+        position: absolute;
+        height: 350px;
+        padding: 50px;
+        display: flex;
+        justify-content: space-around;
+        transition: opacity 10ms 300ms, visibility 300ms 10ms;
+    }
+    .ocultar{
+        opacity: 0 !important;
+        visibility: hidden !important;
+        transition: opacity 300ms 10ms, visibility 10ms 300ms !important;}
+
+    #izq {
+        margin-top: 80px;
+        margin-bottom: 80px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        user-select: none;
+    }
+
+    #izq p {
+        /* border: 1px solid black; */
+        text-align: justify;
+        margin-top: 0;
+        padding: 20px;
+        padding-top: 0;
+    }
+
+    #btn {
+        font-family: "EB Garamond"
+    }
+
+    #dark {
+        color: #1c1c1c;
+        border: none;
+    }
+
+    #light {
+        display: none;
+        color: white;
+
+        border: none;
+    }
+
+    button {
+        background-color: transparent;
+    }
+
+    #fondo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.5s;
+        font-family: "EB Garamond";
+    }
+
+    #cuadro {
+        width: 730px;
+        min-width: 730px;
+        background-color: rgba(103, 103, 117, 0.5);
+        border-radius: 10px;
+        box-shadow: 0px 3px 12px 3px #000000a5;
+        
+    }
+
+    img {
+        border-radius: 10%;
+    }
+
+    .boton,
+    #letra,
+    .luna {
+        padding: 5px;
+        margin: 8px;
+        display: flex;
+        align-items: center;
+        border-radius: 3px;
+        user-select: none;
+    }
+
+    /* botones sensacion de pulsado */
+    .boton:hover {
+        box-shadow: 2px 2px 3px #1c1c1c;
+        cursor: pointer;
+        transition: all 200ms;
+    }
+
+    /* cuando clicamos sobre el boton */
+    .boton:active {
+        transform: translateY(2px);
+        box-shadow: 2px 0px 2px #1c1c1c;
+    }
+
+    #contacto {
+        flex-direction: column;
+        /* background-color: rgba(95, 158, 160, 0.521); */
+        /* margin: 50px; */
+    }
+    #base-contacto {
+        background-color: rgba(255, 255, 255, 0.493);
+        width: 100%;
+        height: 100%;
+        /* border: 1px solid black; */
+        border-radius: 5px;
+        box-shadow: 0px 2px 8px 1.5px #0000006b;
+        
+    }
+    #link {
+        text-decoration: none;
+        color: black;
+        transition: all 0.5s;
+    }
+
+    #base-contacto>div {
+        width: 100%;
+    }
+
+    #red {
+        height: 40%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    #red div {
+        width: 33%;
+    }
+
+    #red p {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+    }
+
+    #qr {
+        transition: all 1s;
+        height: 1rem;
+        
+    }
+    #in:hover {
+        cursor: pointer;
+    }
+
+    #blue {
+        height: 60%
+    }
+    @keyframes mano {
+        from {transform: scale(1);}
+        to {transform: scale(1.15);}
+    }
+    #hola {
+        animation: mano 700ms infinite;
+    }
+    #formulario{
+        display: flex;
+        flex-direction: column;
+        padding: 0px 25px;
+    }
+    #formulario textarea{
+        resize: none;
+    }
+
+    #formulario input{
+       width: 100px;
+       align-self: flex-end;
+       margin-top: 15px;
+       color: white;
+       background-color: #1c1c1c;
+       border: none;
+       border-radius: 3px;
+       padding: 3px 0px;
+    }
+
+    .activo {
+        font-weight: 600;
+        /* border: 1px solid black; */
+        /* box-shadow: 1px 1px 40px 1px; */
+        /* text-shadow: 1px 1px 12px #f1f500; */
+        
+         animation: glow 1s ease-in-out infinite alternate;
+        
+   
+    }
+
+    @keyframes glow {
+  from {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #d15c6c, 0 0 20px #d15c6c, 0 0 25px #d15c6c, 0 0 30px #d15c6c, 0 0 35px #d15c6c;
+  }
+  
+  to {
+    text-shadow: 0 0 10px #fff, 0 0 15px #f54242, 0 0 20px #f54242, 0 0 25px #f54242, 0 0 30px #f54242, 0 0 35px #f54242, 0 0 40px #f54242;
+  }
+}
+    
+</style>
+
+<body id="fondo">
+    <div id="cuadro">
+        <div id="superior">
+            <div id="logo">
+                <div  id="letra">S</div>
+            </div>
+
+            <!-- id es un identificador unico -->
+            <div id="menu">
+                <div class="boton activo" 
+                id="btn_inicio"
+                onclick="home()">Inicio</div>
+                <!-- <div class="boton">About</div> -->
+                <div id="btn_contacto" class="boton" onclick="contacto()">Contacto</div>
+                <div class="luna">
+                    <button id="dark" onclick="oscurecer()"><i class="bi bi-moon-fill"></i></button>
+                    <button id="light" onclick="iluminar()"><i class="bi bi-moon-fill"></i></button>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div id="contenedor">
+            <div id="home">
+                <div id="izq">
+                    <h2>SEBASTIAN RIVAS MORENO</h2>
+                    <P>Dada mi formación en el área profesional he venido fortaleciendo mi conocimiento y adquiriendo
+                        experiencia laborar, me siento capacitado para enfrentarme a cualquier situación dando una
+                        solución
+                        con eficiencia y eficacia.</P>
+
+                    <a target="_blank"
+                        href="https://drive.google.com/file/d/129Y1eEgOjdqOsYA3jl_9fhZnmeDbGLjy/view?usp=sharing">
+                        <button id="btn">Descargar CV</button>
+                    </a>
+                </div>
+                <div id="der">
+                    <img id="foto" src="img/perfil.webp" alt="" height="100%">
+                </div>
+            </div>
+            <div id="contacto" class="ocultar">
+                <div id="base-contacto">
+                    <div id="red">
+                        <div>
+                            <p><a id="link" 
+                                target="_blank"
+                                href="tel:+34613965797"><i class="bi bi-phone-fill"></i></a></p>
+                            <p>613965797</p>
+                        </div>
+                        <div>
+                            <p><i class="bi bi-envelope-at-fill"></i></p>
+                            <p>sebasmoreno647@gmail.com</p>
+                        </div>
+    
+                        <div>
+                            <p><i onclick="linkedln()" id="in" class="bi bi-linkedin"></i><a href="https://www.linkedin.com/in/sebastian-moreno152208/"><img id="qr" src="img/qr.jpeg"
+                                alt="codigo qr roto"></a></p>
+                            <p id="hola">
+                                <i class="bi bi-hand-index-thumb"></i>
+                            </p>
+                        </div>
+                    </div>
+    
+    
+                    <div id="blue">
+                        <form id="formulario" action="mailto:sebasmoreno647@gmail.com" 
+                        method="get">
+                            <h4>Mensaje:</h4>
+                            <textarea name="body" required cols="70"  rows="6"></textarea>
+                            <input type="submit">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+
+<script>
+
+    superior = document.getElementById("superior");
+    logo = document.getElementById("logo");
+    menu = document.getElementById("menu");
+    fondo = document.getElementById("fondo");
+    btn = document.getElementById("btn");
+    black = "#1c1c1c"; //  color negro para no molestar la vista
+    dark = document.getElementById("dark");
+    link = document.getElementById("link");
+    light = document.getElementById("light");
+    cuadro = document.getElementById("cuadro");
+    shadow_black = "0px 3px 12px 3px #000000a5";
+    shadow_white = "0px 3px 12px 3px #ffffffa5";
+    foto = document.getElementById("foto");
+
+    function oscurecer() {
+        superior.style.color = "white";
+        logo.style.color = "white";
+        menu.style.color = "white";
+        fondo.style.color = "white";
+        link.style.color = "white";
+        fondo.style.backgroundColor = black;
+        btn.style.color = "white";
+        dark.style.display = "none";
+        light.style.display = "block";
+        cuadro.style.boxShadow = shadow_white;
+        foto.src = "img/perfil.webp1.webp";
+
+    }
+
+    function iluminar() {
+        superior.style.color = black;
+        logo.style.color = black;
+        menu.style.color = black;
+        fondo.style.color = black;
+        link.style.color = black;
+        fondo.style.backgroundColor = "white";
+        btn.style.color = black;
+        dark.style.display = "block";
+        light.style.display = "none";
+        cuadro.style.boxShadow = shadow_black;
+        foto.src = "img/perfil.webp";
+    }
+    //funciones para cambiar de menu
+    menu_home = document.getElementById("home");
+    menu_contacto = document.getElementById("contacto");
+    // menu_contacto.style.display = "none";
+    // menu_home.style.display = "none";
+
+    btn_inicio = document.getElementById("btn_inicio");
+    btn_contacto = document.getElementById("btn_contacto");
+    function home() {
+        // menu_home.style.display = "flex";
+        // menu_contacto.style.display = "none";
+        menu_contacto.classList.add("ocultar");
+        menu_home.classList.remove("ocultar");
+        btn_contacto.classList.remove("activo");
+        btn_inicio.classList.add("activo");
+
+
+    }
+    function contacto() {
+        // menu_home.style.display = "none";
+        // menu_contacto.style.display = "flex";
+        menu_contacto.classList.remove("ocultar");
+        menu_home.classList.add("ocultar");
+        btn_inicio.classList.remove("activo");
+        btn_contacto.classList.add("activo");
+    }
+
+    //qr
+    hola = document.getElementById("hola");
+    qr = document.getElementById("qr");
+    logo_in = document.getElementById("in");
+    qr.style.display = "none";
+    
+
+    function linkedln() {
+        qr.style.display = "block";
+        logo_in.style.display = "none";
+        hola.style.opacity = 0;
+        setTimeout(() => {
+            qr.style.height = "5rem";
+        }, 100);
+
+        setTimeout(() => {
+            qr.style.height = "1rem";
+            setTimeout(() => {
+                qr.style.display = "none";
+                logo_in.style.display = "block";
+                hola.style.opacity = 1;
+            }, 1000);
+        }, 10000);
+
+    }
+</script>
